@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- PAGE METADATA -->
+    <meta name="description" content="Onu is a free multiplayer card game based off the popular card game Uno in which you match the colour or number of the last card, first one to zero cards left wins!">
+    <meta name="tags" content="uno, free, multiplayer, card, crazy-eights, game, online">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-73697868-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-73697868-2');
+    </script>
+    <meta charset="UTF-8">
+    <!-- APPLE STUFF -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, viewport-fit=cover'"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="https://i.imgur.com/bfxbw3P.png"/>
+    <meta name="apple-mobile-web-app-title" content="onu">
+    <!-- END: APPLE STUFF -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://i.imgur.com/brW1fJn.png">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:500,700,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <title>onu | Playing Card Game</title>
+</head>
+
+<body>
+    <div class="body justified active">
+        <div class="header">onu</div>
+        <div class="buttons">
+            <input type="text" maxlength="6" placeholder="Enter Game PIN" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <div class="button">Join Game</div>
+            <div class="tooltip">or click here to create one</div>
+        </div>
+    </div>
+    <div class="body justified inactive">
+        <div class="header">username</div>
+        <div class="buttons">
+            <input type="text" maxlength="16" placeholder="Enter Name" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+            <div class="button">Get Started</div>
+        </div>
+    </div>
+    <div class="body justified inactive">
+        <div id="board">
+            <div id="top" class="section">
+                <div id="emoji">👍🏽</div>
+                <div id="code">
+                    <div class="placeholder right">Your Game PIN is</div>
+                    <div class="code"></div>
+                </div>
+            </div>
+            <div id="bottom" class="section">
+                <div class="placeholder">Current Players</div>
+                <div class="list"></div>
+            </div>
+            <div id="last" class="section">
+                <div class="toggle" ready="false"></div>
+            </div>
+        </div>
+    </div>
+    <div class="body inactive">
+        <div id="enemies"></div>
+        <div id="discard-pile">
+            <div class="game-text"></div>
+            <div class="card hidden"></div>
+        </div>
+        <div id="player-hand" class="disabled"></div>
+    </div>
+    <script> </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
