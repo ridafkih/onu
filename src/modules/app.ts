@@ -5,8 +5,12 @@ import https from "https";
 import AppRoute from "@/@types/AppRoute";
 
 import * as routes from "@/routes";
-import { getEnvironmentVariables } from "@/utils/env";
+import globalMiddleware from "@/middlewares/global";
 
+import { getEnvironmentVariables } from "@/utils/env";
+import AppMiddleware from "@/@types/AppMiddleware";
+
+const middleware: AppMiddleware[] = globalMiddleware;
 const endpoints: AppRoute[] = Object.values(routes);
 
 const {
@@ -22,7 +26,21 @@ export const servers = {
   https: https.createServer({ key, cert }, app).listen(HTTPS_PORT),
 };
 
+/**
+ * Registers a middleware.
+ * @param middleware The request handler to register as a middleware.
+ * @returns The express server.
+ */
+export const registerMiddleware = (middleware: AppMiddleware) =>
+  app.use(middleware);
+
+/**
+ * Registers an endpoint using the custom app route.
+ * @param route The route to register to the app server.
+ * @returns The express server.
+ */
 export const registerEndpoint = ({ method, handler, path }: AppRoute) =>
   app[method](path, handler);
 
+middleware.map(registerMiddleware);
 endpoints.map(registerEndpoint);
