@@ -4,7 +4,8 @@
   "description": "Onu is a free multiplayer card game based off the popular card game Uno in which you match the colour or number of the last card, first one to zero cards left wins!",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node -r tsconfig-paths/register src/index.ts"
+    "start": "ts-node -r tsconfig-paths/register src/index.ts",
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@types/ws": "^8.5.2",
+    "nodemon": "^2.0.15",
     "ts-node": "^10.7.0",
     "tsc-alias": "^1.6.4",
     "tsconfig-paths": "^3.13.0",
