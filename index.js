@@ -12,11 +12,11 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
-server.listen(6060);
+server.listen(8080);
 const wss = new WebSocket.Server({ server });
 
 wss.on("listening", () =>
-  console.log(`[NOTICE]: Onu Live on wss://localhost:${wss.options.port}`),
+  console.log(`[NOTICE]: Onu Live on ws://localhost:8080/`),
 );
 wss.on("connection", (ws) => {
   const player = new Player(ws);
