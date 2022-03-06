@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ridafkih/Onu.git"
+    "url": "git+https://github.com/ridafkih/onu.git"
   },
   "author": "Rida F'kih",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ridafkih/Onu/issues"
+    "url": "https://github.com/ridafkih/onu/issues"
   },
-  "homepage": "https://github.com/ridafkih/Onu#readme",
+  "homepage": "https://github.com/ridafkih/onu#readme",
   "dependencies": {
     "@types/express": "^4.17.13",
     "dotenv": "^16.0.0",
