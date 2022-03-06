@@ -66,14 +66,10 @@ function init() {
     });
 };
 
-const ws = new WebSocket('wss://rida.dev:6060');
+const ws = new WebSocket("ws://" + location.host);
 
 ws.onopen = () => {
     console.log('WebSocket Opened');
-    // ws.send(JSON.stringify({
-    //     method: 'create_game',
-    //     body: { username: 'rida' }
-    // }));
 };
 
 ws.onmessage = message => {
