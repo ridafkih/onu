@@ -1,12 +1,16 @@
-const WebSocket = require('ws'),
-      fs = require('fs');
+const WebSocket = require('ws');
+const express = require("express");
 
-const key = fs.readFileSync('./ssl/privkey.pem'),
-      cert = fs.readFileSync('./ssl/fullchain.pem');
-      credentials = { key, cert };
+const http = require("http");
+const path = require('path');
+const app = express();
+const server = http.createServer(app);
 
-const https = require('https'),
-      server = https.createServer(credentials);
+app.use("/", express.static(path.join(__dirname, "..", "frontend")))
+
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "..", "frontend", "index.html"));
+})
 
 server.listen(6060);
 const wss = new WebSocket.Server({ server });
