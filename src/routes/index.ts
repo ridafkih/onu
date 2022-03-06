@@ -1,1 +1,1 @@
-export * from "@/routes/_index";
+export { default as index } from "@/routes/_index";

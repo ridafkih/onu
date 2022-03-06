@@ -8,6 +8,6 @@ export default {
   method: "get",
   path: "/",
   handler: (_request: Request, response: Response) => {
-    response.sendFile(path.join(__dirname, "src", "public", "index.html"));
+    response.sendFile(path.join(process.cwd(), "src", "public", "index.html"));
   },
 } as AppRoute;
