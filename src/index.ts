@@ -1,4 +1,3 @@
-import WebSocket from "ws";
-import fastify from "fastify";
+import { app } from "@/modules/app";
 
-const app = fastify();
+console.log(app);
