@@ -1,0 +1,23 @@
+{
+  "name": "onu",
+  "version": "1.0.0",
+  "description": "Onu is a free multiplayer card game based off the popular card game Uno in which you match the colour or number of the last card, first one to zero cards left wins!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ridafkih/Onu.git"
+  },
+  "author": "Rida F'kih",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ridafkih/Onu/issues"
+  },
+  "homepage": "https://github.com/ridafkih/Onu#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "ws": "^8.5.0"
+  }
+}

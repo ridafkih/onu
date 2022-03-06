@@ -6,10 +6,10 @@ const path = require("path");
 const app = express();
 const server = http.createServer(app);
 
-app.use("/", express.static(path.join(__dirname, "..", "frontend")));
+app.use("/", express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontend", "index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 server.listen(6060);
