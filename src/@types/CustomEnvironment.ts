@@ -1,4 +1,6 @@
 export default interface CustomEnvironment {
+  ENVIRONMENT: "development" | "staging" | "production";
+
   SSL_KEY: string;
   SSL_CERT: string;
 
